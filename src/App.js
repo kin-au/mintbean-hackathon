@@ -10,7 +10,11 @@ const searchClient = algoliasearch(
 );
 
 const Hit = ({ hit }) => {
-  return <p>{hit.make_display}</p>;
+  return (
+    <p>
+      {hit.make_display}, from {hit.make_country}
+    </p>
+  );
 };
 
 function App() {
